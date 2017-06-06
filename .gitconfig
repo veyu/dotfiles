@@ -1,0 +1,15 @@
+[push]
+	default = simple
+[color]
+	status = true
+	branch = true
+	diff = true
+	ui = auto
+[log]
+	decorate = full
+[core]
+	editor = vim
+[alias]
+	logs = log --color --oneline --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(cyan)[%an]%Creset%C(yellow)%d' --abbrev-commit --graph
+	logg = log --color --oneline --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(cyan)[%an]%Creset%C(yellow)%d' --abbrev-commit --graph --all
+	logl = log --color --decorate
