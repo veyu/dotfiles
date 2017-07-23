@@ -1,0 +1,15 @@
+# script for starting dwm
+#!/bin/bash
+while true
+do
+    _vol=$(amixer get Master | tail -1 | sed 's/.*\[\([0-9]*%\)\].*/\1/')
+    _localtime=$(date +%H:%M)
+    _date=$(date +%d/%m)
+    _ip=$(for i in `ip r`; do echo $i; done | grep -A 1 src | tail -n1) # can get confused if you use vmware
+    _mem=$(free -m | awk '/Mem:/ {print $3"/"$2" MB"}')
+    _hdd=$(df -h . | awk '/\//{print $5}')
+    xsetroot -name "ip: ${_ip} | hdd: ${_hdd} | mem: ${_mem} | vol: ${_vol} | ${_date} [${_localtime}] "
+    sleep 5s
+done &
+
+exec dwm
