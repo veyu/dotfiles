@@ -11,7 +11,7 @@
 ### vim utilities
 * plugin manager: https://github.com/tpope/vim-pathogen
 * status bar: https://github.com/itchyny/lightline.vim
-* theme: https://github.com/sickill/vim-monokai
+* theme; modified: https://github.com/sickill/vim-monokai
 * python: https://github.com/davidhalter/jedi-vim
 * git: https://github.com/tpope/vim-fugitive
 

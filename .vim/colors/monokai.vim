@@ -1,5 +1,6 @@
 " Vim color file
-" Converted from Textmate theme Monokai using Coloration v0.3.2 (http://github.com/sickill/coloration)
+" Original file from: https://github.com/sickill/vim-monokai
+" with some additions.
 
 set background=dark
 highlight clear
@@ -107,3 +108,46 @@ hi cssClassName ctermfg=148 ctermbg=NONE cterm=NONE guifg=#a6e22e guibg=NONE gui
 hi cssValueLength ctermfg=141 ctermbg=NONE cterm=NONE guifg=#ae81ff guibg=NONE gui=NONE
 hi cssCommonAttr ctermfg=81 ctermbg=NONE cterm=NONE guifg=#66d9ef guibg=NONE gui=NONE
 hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+
+" Markdown highlight
+hi markdownH1 ctermfg=208 cterm=bold guifg=#fd971f
+hi markdownH2 ctermfg=208 cterm=bold guifg=#fd971f
+hi markdownH3 ctermfg=208 cterm=bold guifg=#fd971f
+hi markdownH4 ctermfg=208 cterm=bold guifg=#fd971f
+hi markdownH5 ctermfg=208 cterm=bold guifg=#fd971f
+hi markdownH6 ctermfg=208 cterm=bold guifg=#fd971f
+hi markdownHeadingRule ctermfg=208 cterm=bold guifg=#fd971f
+hi markdownHeadingDelimiter ctermfg=208 cterm=bold guifg=#fd971f
+"hi markdownOrderedListMarker ctermfg=208 guifg=#fd971f
+"hi markdownListMarker ctermfg=208 guifg=#fd971f
+hi markdownBlockquote ctermfg=141 cterm=italic guifg=#ae81ff
+hi markdownBlockquoteDelimiter ctermfg=141 cterm=italic guifg=#ae81ff
+"hi markdownRule ctermfg=208 guifg=#fd971f
+"
+"hi markdownFootnote ctermfg=197 guifg=#fd971f
+"hi markdownFootnoteDefinition ctermfg=197 guifg=#fd971f
+"
+hi markdownLinkText ctermfg=81 guifg=#66d9ef
+"hi markdownIdDeclaration ctermfg=208 guifg=#fd971f
+"hi markdownId ctermfg=208 guifg=#fd971f
+"hi markdownAutomaticLink ctermfg=208 guifg=#fd971f
+hi markdownUrl ctermfg=148 guifg=#a6e22e
+hi markdownUrlTitle ctermfg=186 guifg=#e6da74
+"hi markdownIdDelimiter ctermfg=208 guifg=#fd971f
+"hi markdownUrlDelimiter ctermfg=208 guifg=#fd971f
+"hi markdownUrlTitleDelimiter ctermfg=208 guifg=#fd971f
+"
+hi markdownItalic ctermfg=197 cterm=italic guifg=#f92672
+hi mmarkdownItalicDelimiter ctermfg=197 cterm=NONE guifg=#f92672
+hi markdownBold ctermfg=197 cterm=bold guifg=#f92672
+hi markdownBoldDelimiter ctermfg=197 cterm=bold guifg=#f92672
+hi markdownBoldItalic ctermfg=197 cterm=bold,italic guifg=#f92672
+hi markdownBoldItalicDelimiter ctermfg=197 cterm=bold guifg=#fd971f
+
+hi markdownCodeBlock ctermfg=186 guifg=#e6e22e
+hi markdownCodeDelimiter ctermfg=186 guifg=#e6e22e
+hi markdownInlineCode ctermfg=186 guifg=#e6e22e
+hi markdownFencedCodeBlock ctermfg=186 guifg=#e6e22e
+
+"Hi markdownEscape ctermfg=208 guifg=#fd971f
+"hi markdownError ctermfg=208 guifg=#fd971f
