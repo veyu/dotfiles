@@ -1,11 +1,11 @@
 " Vim syntax file
 " NOTE(veyu): This is Vim syntax file from official distribution of Vim 8.x,
-" slightly modified using vim-markdown by Gabriele Lana
-" (https://github.com/gabrielelana/vim-markdown) for better matching and
-" highlight.
+" slightly modified by me and using:
+" - https://github.com/gabrielelana/vim-markdown
+
 " Language:     Markdown
 " Filenames:    *.markdown
-" Last Change:  2018 April 15
+" Last Change:  2018 April 24
 
 if exists("b:current_syntax")
   finish
@@ -87,9 +87,10 @@ exe 'syn region markdownBold matchgroup=markdownBoldDelimiter start="\S\@<=__\|_
 exe 'syn region markdownBoldItalic matchgroup=markdownBoldItalicDelimiter start="\S\@<=\*\*\*\|\*\*\*\S\@=" end="\S\@<=\*\*\*\|\*\*\*\S\@=" keepend contains=markdownLineStart' . s:concealends
 exe 'syn region markdownBoldItalic matchgroup=markdownBoldItalicDelimiter start="\S\@<=___\|___\S\@=" end="\S\@<=___\|___\S\@=" keepend contains=markdownLineStart' . s:concealends
 
-
-syn region markdownInlineCode matchgroup=markdownCodeDelimiter start="\%(`\)\@<!`" end="`" keepend contains=@NoSpell
-syn region markdownInlineCode matchgroup=markdownCodeDelimiter start="\%(`\)\@<!`\z(`\+\)" end="`\z1" keepend contains=@NoSpell
+" FIXME(veyu): Only problem is when start matches but nothing match end - it
+" should not match at all but below definition streches region from start
+" match to EOF
+syntax region markdownInlineCode start="`\@<!\z(`\+\)`\@!" end="`\@<!\z1\`\@!" keepend contains=@NoSpell
 
 syn region markdownFencedCodeBlock matchgroup=markdownCodeDelimiter start=/^\s\{,3}```\%(`*\).*$/ end=/^\s\{,3}```\%(`*\)\s*$/ contains=@NoSpell
 syn region markdownFencedCodeBlock matchgroup=markdownCodeDelimiter start=/^\s\{,3}\~\~\~\%(\~*\).*$/ end=/^\s\{,3}\~\~\~\%(\~*\)\s*$/ contains=@NoSpell
