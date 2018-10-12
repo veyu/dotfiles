@@ -22,18 +22,6 @@ set incsearch
 set ignorecase " ignore case when searching
 set smartcase " switch to case-sensitive when typing uppercase
 
-" Damian Conway's Die Blinkënmatchen: highlight matches
-nnoremap <silent> n n:call HLNext(0.1)<cr>
-nnoremap <silent> N N:call HLNext(0.1)<cr>
-function! HLNext (blinktime)
-  let target_pat = '\c\%#'.@/
-  let ring = matchadd('ErrorMsg', target_pat, 101)
-  redraw
-  exec 'sleep ' . float2nr(a:blinktime * 1000) . 'm'
-  call matchdelete(ring)
-  redraw
-endfunction
-
 " navigation options
 set scrolloff=1
 set sidescrolloff=5
