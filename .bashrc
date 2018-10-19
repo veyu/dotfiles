@@ -12,6 +12,7 @@ alias ll='ls -al --color=auto'
 
 #
 export PS1='[\u@\h \W]\$ '
+export RIPGREP_CONFIG_PATH=$HOME/.config/ripgrep/rc
 
 #
 source $HOME/.config/git-completion.bash
