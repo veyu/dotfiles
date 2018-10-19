@@ -42,6 +42,10 @@ set splitbelow
 " remap C-u to start new change before deleting line
 inoremap <c-u> <c-g>u<c-u>
 
+" remap C-r in visual mode to search selected text and replace
+" press Esc to only search for selected
+vnoremap <C-r> "gy/\V<C-r>g<CR>:%s/<C-r>g//gc<left><left><left>
+
 " DON'T USE ARROWS NEVER AGAIN
 noremap <Up> <NOP>
 noremap <Down> <NOP>
