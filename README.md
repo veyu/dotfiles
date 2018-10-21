@@ -13,7 +13,7 @@
 
 ### search utils
 * ripgrep: https://github.com/BurntSushi/ripgrep
-* ag: https://github.com/ggreer/the_silver_searcher
+* fzf: https://github.com/junegunn/fzf
 
 ## vim config
 * plugin manager: https://github.com/tpope/vim-pathogen
@@ -25,3 +25,4 @@
 ### vim additionals
 * jinja: https://github.com/lepture/vim-jinja
 * vim-surround: https://github.com/tpope/vim-surround
+* fuzzy search: https://github.com/junegunn/fzf.vim

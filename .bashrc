@@ -13,6 +13,7 @@ alias ll='ls -al --color=auto'
 #
 export PS1='[\u@\h \W]\$ '
 export RIPGREP_CONFIG_PATH=$HOME/.config/ripgrep/rc
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
 #
 source $HOME/.config/git-completion.bash
