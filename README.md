@@ -26,3 +26,8 @@
 * jinja: https://github.com/lepture/vim-jinja
 * vim-surround: https://github.com/tpope/vim-surround
 * fuzzy search: https://github.com/junegunn/fzf.vim
+* langs: https://github.com/sheerun/vim-polyglot.git
+
+## TODO
+* tags: http://ctags.sourceforge.net/
+* linting: https://github.com/w0rp/ale
