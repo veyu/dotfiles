@@ -124,15 +124,12 @@ let g:fzf_layout = { 'down': '~20%' }
 command! -bang -nargs=* Find
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
-  \   <bang>0 ? fzf#vim#with_preview('up:60%')
-  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   {'options': '--delimiter : --nth 4..'},
   \   <bang>0)
 
 command! -bang -nargs=* Findvisual
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --color=always '.shellescape(expand('<cword>')), 1,
-  \   <bang>0 ? fzf#vim#with_preview('up:60%')
-  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   <bang>0)
 
 " VIM-POLYGLOT
