@@ -27,7 +27,8 @@
 * vim-surround: https://github.com/tpope/vim-surround
 * fuzzy search: https://github.com/junegunn/fzf.vim
 * langs: https://github.com/sheerun/vim-polyglot.git
+* linting: https://github.com/w0rp/ale
+* linting indicators: https://github.com/maximbaz/lightline-ale.git
 
 ## TODO
 * tags: http://ctags.sourceforge.net/
-* linting: https://github.com/w0rp/ale

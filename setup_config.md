@@ -49,7 +49,7 @@ cp vim-pathogen/autoload/pathogen.vim $HOME/.vim/autoload
 git clone git://github.com/tpope/vim-fugitive.git $HOME/.vim/bundle/vim-fugitive
 ```
 
-### lightline
+### lightline.vim
 ```bash
 git clone https://github.com/itchyny/lightline.vim $HOME/.vim/bundle/lightline.vim
 ```
@@ -69,7 +69,7 @@ git clone https://github.com/tpope/vim-surround $HOME/.vim/bundle/vim-surround
 git clone https://github.com/lepture/vim-jinja $HOME/.vim/bundle/vim-jinja
 ```
 
-### fzf-vim
+### fzf.vim
 Install *fzf*
 ```bash
 git clone https://github.com/junegunn/fzf.vim $HOME/.vim/bundle/fzf.vim
@@ -78,4 +78,14 @@ git clone https://github.com/junegunn/fzf.vim $HOME/.vim/bundle/fzf.vim
 ### vim-polyglot
 ```bash
 git clone https://github.com/sheerun/vim-polyglot.git $HOME/.vim/bundle/vim-polyglot
+```
+
+### ale
+```bash
+git clone https://github.com/w0rp/ale $HOME/.vim/bundle/ale
+```
+
+### lightline-ale
+```bash
+git clone https://github.com/maximbaz/lightline-ale.git $HOME/.vim/bundle/lightline-ale
 ```
