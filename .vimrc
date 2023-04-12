@@ -147,3 +147,38 @@ command! -bang -nargs=* Findvisual
 
 " VIM-POLYGLOT
 let g:polyglot_disabled = ['markdown']
+
+" vim-ale
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_disable_lsp = 1
+
+
+" vim-lsp
+if executable('pyls')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'erlang_ls',
+        \ 'cmd': {server_info->['erlang_ls']},
+        \ 'allowlist': ['erlang'],
+        \ })
+endif
+autocmd FileType erl setlocal omnifunc=lsp#complete
+function! s:on_lsp_buffer_enabled() abort
+    setlocal omnifunc=lsp#complete
+    setlocal signcolumn=yes
+    if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
+    nmap <buffer> gd <plug>(lsp-definition)
+    nmap <buffer> gr <plug>(lsp-references)
+    nmap <buffer> gi <plug>(lsp-implementation)
+    nmap <buffer> gt <plug>(lsp-type-definition)
+    nmap <buffer> <leader>rn <plug>(lsp-rename)
+    nmap <buffer> [g <Plug>(lsp-previous-diagnostic)
+    nmap <buffer> ]g <Plug>(lsp-next-diagnostic)
+    nmap <buffer> K <plug>(lsp-hover)
+    " refer to doc to add more commands
+endfunction
+
+augroup lsp_install
+   au!
+   " call s:on_lsp_buffer_enabled only for languages that has the server registered.
+    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+augroup END
